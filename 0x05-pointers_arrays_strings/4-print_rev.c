@@ -1,15 +1,30 @@
+#include <stdio.h>
 #include "main.h"
+#include "2-strlen.c"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * _strlen-: return the length of string
+ * @s :pointer to first element in array.
+ * Return: length of string int value
  */
-int main(void)
-{
-    char *str;
+int _strlen(char *s);
+/**
+ * print_rev-: prints the revers  of string
+ * @s :pointer to first element in array.
+ * Return: void
+ */
 
-    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-    print_rev(str);
-    return (0);
+
+void print_rev(char *s)
+{
+	int len = _strlen(s);
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+	printf("%c", s[len - 1]);
+	i++;
+	len--;
+	}
+	printf("\n");
 }
